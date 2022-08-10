@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  resizer:
+    ports:
+      - "80:80"
+networks:
+  resizer-network:

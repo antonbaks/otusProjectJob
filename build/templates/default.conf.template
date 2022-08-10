@@ -1,0 +1,6 @@
+server {
+    listen       80;
+    location /testdata {
+       root /var/www;
+    }
+}

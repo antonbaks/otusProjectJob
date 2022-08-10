@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  resizer:
+    build:
+      context: ../.
+      dockerfile: build/Dockerfile
+    networks:
+     - resizer-network
+networks:
+  resizer-network:

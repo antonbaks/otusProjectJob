@@ -1,9 +1,6 @@
 name: Otus project work tests
 
-on:
-  push:
-    branches:
-      - *
+on: [push]
 
 env:
   GO111MODULE: "on"
@@ -12,12 +9,11 @@ jobs:
 
   tests_by_makefile:
     runs-on: ubuntu-latest
-    if: contains(github.ref, 'resizer')
     steps:
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
-          go-version: ^1.16
+          go-version: ^1.18
 
       - name: Check out code
         uses: actions/checkout@v2
@@ -30,3 +26,6 @@ jobs:
 
       - name: make test
         run: make test
+
+      - name: make integration-tests
+        run: make integration-tests

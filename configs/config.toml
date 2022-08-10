@@ -1,0 +1,8 @@
+cacheSize = 1
+uploadDir = "./upload"
+HTTPHost = "resizer"
+HTTPPort = "80"
+maxWidth = 1000
+minWidth = 10
+maxHeight = 1000
+minHeight = 10
